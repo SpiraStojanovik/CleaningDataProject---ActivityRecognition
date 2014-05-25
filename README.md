@@ -54,7 +54,6 @@ The following variables have the word "mean" in them but are excluded as they do
 * 13 variables that contain "meanFreq", and 
 * 7 variables associated with angle measurements
 
-
 ## Naming convention 
 
 Variable names kept for the tidy data set are generally using the naming convention in the original set for the following reason: 
