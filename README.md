@@ -68,9 +68,9 @@ However, the names are cleaned up to remove the following symbols: "_","(",")" a
 
 Listed below are some plots showing interesting relationships. The plots are generated with the lattice plotting package. 
 
-### Plot 1
+Plot 1
 
-![plot of chunk plot1](figure/plot1.png) 
+##![plot of chunk plot1](figure/plot1.png) 
 
 
 
