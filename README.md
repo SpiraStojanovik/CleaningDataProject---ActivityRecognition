@@ -19,7 +19,7 @@ This repository contains the following files:
 * README.md - this file 
 * ActivityProjectCode.R - script to create the tidy data set
 * Activity Measurements.txt - tidy data set, a tab delimited text file
-* CodeFile.pdf - description of the variables in "Activity Measurements.txt"
+* CodeBook-ActivityMeasurements.pdf - description of the variables in "Activity Measurements.txt"
 * Four plots showing interesting patterns in the tidy data set (plot1.png etc) - The script for the plots is included in the ActivityProjectCode.R
 
 
