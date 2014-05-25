@@ -17,7 +17,7 @@ The project objective is to create a tidy data set that contains the average val
 
 This repository contains the following files:
 * README.md - this file 
-* ActivityProjectCode.R - script to create the tidy data set
+* run_analysis.R - script to create the tidy data set (description on how the script works is provided within the file)
 * Activity Measurements.txt - tidy data set, a tab delimited text file
 * CodeBook-ActivityMeasurements.pdf - description of the variables in "Activity Measurements.txt"
 * Four plots showing interesting patterns in the tidy data set (plot1.png etc) - The script for the plots is included in the ActivityProjectCode.R
