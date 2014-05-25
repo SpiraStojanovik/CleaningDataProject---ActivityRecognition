@@ -20,12 +20,13 @@ This repository contains the following files:
 * ActivityProjectCode.R - script to create the tidy data set
 * Activity Measurements.txt - tidy data set, a tab delimited text file
 * CodeFile.pdf - description of the variables in "Activity Measurements.txt"
+* Four plots showing interesting patterns in the tidy data set (plot1.png etc) - The script for the plots is included in the ActivityProjectCode.R
 
 
 ## Data inclusion/ exclusion 
 
-The Human Activity Recognition database could be downloaded from this webpage: 
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+The Human Activity Recognition database could be downloaded from 
+<a href= "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"> here</a>. 
 
 The database contains many datasets. For the project, only the following files are used:   
 
@@ -61,31 +62,4 @@ Variable names kept for the tidy data set are generally using the naming convent
 * users of the original data sets are familiar with the names and would not have a difficilty using the names in the tidy data set
 
 However, the names are cleaned up to remove the following symbols: "_","(",")" and excessive dots. Some dots remain to improve readibility. Example: "tBodyAcc.mean.Y"
-
-
-## Some plots showing interesting patterns in the tidy data set
-
-Listed below are some plots showing interesting relationships. The plots are generated with the lattice plotting package. 
-
-Plot 1
-
-![plot of plot1](figure/plot1.png) 
-
-
-
-The script for the plots is provided below. 
-
-library(lattice)
-png(file = "plot1.png",width = 600, height = 480,)
-xyplot(tGravityAcc.mean.X ~ tGravityAcc.std.X | activity, data = dataTidy,col=subject)
-dev.off()
-png(file = "plot2.png",width = 600, height = 480,)
-xyplot(tBodyAccMag.mean ~ tBodyAccMag.std | activity, data = dataTidy,col=subject)
-dev.off()
-png(file = "plot3.png",width = 600, height = 480,)
-xyplot(tGravityAccMag.mean ~ tBodyAccMag.mean | activity, data = dataTidy,col=subject)
-dev.off()
-png(file = "plot4.png",width = 600, height = 480,)
-xyplot(fBodyAccMag.mean ~ fBodyAccMag.std | activity, data = dataTidy,col=subject)
-dev.off()
 

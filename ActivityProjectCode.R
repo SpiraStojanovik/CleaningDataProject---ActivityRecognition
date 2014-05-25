@@ -1,11 +1,6 @@
 # STEP 1 - READ AND COMBINE DATA SETS ----
 
-# Source data sets ====
-
-# Source of original data sets:
-# https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
-
-# Save the following files in the working directory:
+# Save the relevant files in the working directory ====
     # X_test.txt, Y_test.txt, subject_test.txt, 
     # X_train.txt,Y_train.txt,subject_train.txt
     # features.txt, activity_labels.txt
@@ -43,14 +38,6 @@ train<-cbind(train_subject,train_activity,train_data)
 dataAll<-rbind(test,train)
 
 # STEP 2 - EXTRACT RELEVANT MEASUREMENTS ----
-
-# Description of the reasoning for selection of variables ====
-
-# the original data set has 33 variables with the word "std" in it, and 
-# 53 variables with the word "mean" in it
-# I have decided to only select measurements that have a matching "mean" and "std"
-# so that the user of the tidy data set can analyse 
-# the average of the mean and the std for the various measurements
 
 # extract measurements that have both mean and std value ====
 
@@ -117,15 +104,20 @@ write.table(dataTidy,file = "Activity Measurements.txt",sep = "\t",row.names=FAL
 # this is a tab delimited text file that can be opened in excel 
 
 
-# EXTRA STEP - DOING SOME PLOTS ----
+# EXTRA STEP - SOME INTERESTING PLOTS ----
 
 library(lattice)
-xyplot(fBodyBodyGyroJerkMag.mean ~ fBodyBodyGyroJerkMag.std | activity, data = dataLab)
-
-# INTERESTING CHARTS
-xyplot(tGravityAcc.mean.X ~ tGravityAcc.std.X | activity, data = dataLab)
-xyplot(tBodyAccMag.mean ~ tBodyAccMag.std | activity, data = dataLab)
-xyplot(tGravityAccMag.mean ~ tBodyAccMag.mean | activity, data = dataLab)
-xyplot(fBodyAccMag.mean ~ fBodyAccMag.std | activity, data = dataLab)
+png(file = "plot1.png",width = 600, height = 480,)
+xyplot(tGravityAcc.mean.X ~ tGravityAcc.std.X | activity, data = dataTidy,col=subject)
+dev.off()
+png(file = "plot2.png",width = 600, height = 480,)
+xyplot(tBodyAccMag.mean ~ tBodyAccMag.std | activity, data = dataTidy,col=subject)
+dev.off()
+png(file = "plot3.png",width = 600, height = 480,)
+xyplot(tGravityAccMag.mean ~ tBodyAccMag.mean | activity, data = dataTidy,col=subject)
+dev.off()
+png(file = "plot4.png",width = 600, height = 480,)
+xyplot(fBodyAccMag.mean ~ fBodyAccMag.std | activity, data = dataTidy,col=subject)
+dev.off()
 
 
