@@ -69,7 +69,7 @@ Listed below are some plots showing interesting relationships. The plots are gen
 
 Plot 1
 
-##![plot of chunk plot1](figure/plot1.png) 
+![plot of plot1](figure/plot1.png) 
 
 
 
